@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: 200px 200px auto;
+        }
+        button{
+            color: rgb(109, 218, 208);
+            background-color: #763626;
+            margin: 10px;
+            padding: 10px;
+            font-size: 15px;
+            
+        }
+
+        h1{
+            grid-column: 1/4;
+        }
+        
+        .styleTask {
+            padding: 5px 5px; 
+            background-origin: padding-box;
+            border: 3px solid #66a5ad;
+            border-radius: 15px;
+            display: inline-block;
+            
+            margin: 20px;
+        }
+        .btn-task {
+            position: relative;
+            top: .3em;
+            padding: 5px 30px 5px 30px;
+        }
+       
+        .message-box{
+            display: grid;
+            grid-template-columns: auto 150px 150px;
+        }
+       
+
+        p{
+            text-align: start; 
+            font: size 14px;
+            line-height: 8px;
+            font-style: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .output {
+            margin: 20px 0;
+            border: 3px solid #66a5ad;
+            padding: 10px;
+            height: 150px;
+            overflow-y: scroll;
+            position: relative;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+
+        .output > div {
+             
+            height: 300px;
+            max-width: 80%;
+            padding: 5px 10px;
+            margin: 5px 0;
+            border-radius: 3px;
+            color: #fff;
+        }
+
+        .output .receive {
+            background: #4cb5f5;
+            align-self: flex-end;
+        }
+        .output .sent {
+            background: #34675c;
+            align-self: flex-start;
+        }
+     
+     
+
+    </style>
+    <script src="./Task1.js"></script>
+    <script src="./Task2.js"></script>
+    <script src="./Task3.js"></script>
+    
+</head>
+<body>
+    
+    
+    <div class="styleTask">
+        <p>Задание 1</p>
+        <button id="btn-task1">
+            <div class="btn-stroke-icon" id='btn-icon'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-left-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path fill-rule="evenodd" d="M10.828 5.172a.5.5 0 0 0-.707 0L6.025 9.268V6.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H9.5a.5.5 0 0 0 0-1H6.732l4.096-4.096a.5.5 0 0 0 0-.707z"/>
+                </svg>
+            </div>
+        </button>
+        
+    </div>
+    <div class="styleTask">
+        <p>Задание 2</p>
+       
+        <button id="btn-task2">Размеры экрана</button>
+        
+    </div>
+
+    <div class="styleTask" style="grid-column: 1/4;">
+        <p>Задание 3</p>
+        <div class="message-box">
+        <input  id="input" style="margin: 10px;" type="text" placeholder="Здесь вводится текст сообщения"/>
+        
+        <div>
+            <button class="btn-chat" id="btn-send" style="margin: 5px;">Отправить
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div>
+            <button class="btn-chat" id="btn-geo" style="margin: 5px;">Гео-локация
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>   
+            </button> 
+        </div>
+        
+        </div>
+        <div class="output" ></div>
+    </div>
+</body>
+</html>
